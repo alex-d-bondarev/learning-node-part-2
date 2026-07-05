@@ -1,0 +1,10 @@
+name: localhost
+variables:
+  - name: app_url
+    value: http://127.0.0.1:3000
+  - name: health_endpoint
+    value: health
+  - name: v1_api
+    value: api/v1
+  - name: locale
+    value: uk

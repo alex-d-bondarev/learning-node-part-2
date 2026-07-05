@@ -1,14 +1,3 @@
 {
-  "bookNotFound": "Книгу не знайдено.",
-  "bookDeletedSuccessfully": "Книгу успішно видалено.",
-  "bookUpdatedSuccessfully": "Книга успішно оновлена.",
-  "bookNameRequiredValidation": "Назва книги обов'язкова.",
-  "bookNameLengthValidation": "Назва книги має містити від 5 до 100 символів.",
-  "bookPriceRequiredValidation": "Ціна обов'язкова.",
-  "bookPriceValueValidation": "Ціна має бути від 0,01 до 10 000 доларів США.",
-  "bookStockRequiredValidation": "Необхідно зазначити товарний запас.",
-  "bookStockValueValidation": "Кількість товарних позицій має бути від 1 до 100.",
-  "bookImageRequiredValidation": "URL-адреса зображення обов'язкова.",
-  "bookImageValueValidation": "Зображення має бути дійсною URL-адресою.",
-  "bookIdValueValidation": "Ідентифікатор книги має бути дійсним ідентифікатором MongoDB."
+  "validationFailed": "Помилка у валідації"
 }
