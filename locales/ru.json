@@ -1,3 +1,8 @@
 {
-  "validationFailed": "Ошибка в валидации"
+  "categoryDeletedSuccessfully": "Категория успешно удалена.",
+  "categoryUpdatedSuccessfully": "Категория успешно обновлена.",
+  "categoryNameValidation": "Название категории должно содержать не менее 3 символов.",
+  "categoryNotFound": "Категория не найдена.",
+  "noCategoriesFound": "Никаких категорий не найдено.",
+  "validationFailed": "Ошибка в валидациию"
 }

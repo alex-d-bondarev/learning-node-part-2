@@ -5,10 +5,15 @@ info:
 
 http:
   method: GET
-  url: "{{app_url}}/{{v1_api}}/{{health_endpoint}}"
+  url: "{{app_url}}/{{v1_api}}/{{health_endpoint}}?lng=ru"
   headers:
     - name: Accept-Language
       value: "{{locale}}"
+      disabled: true
+  params:
+    - name: lng
+      value: ru
+      type: query
   auth: inherit
 
 settings:

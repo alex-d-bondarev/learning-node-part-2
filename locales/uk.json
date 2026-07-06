@@ -1,3 +1,8 @@
 {
+  "categoryDeletedSuccessfully": "Категорію успішно видалено.",
+  "categoryUpdatedSuccessfully": "Категорію успішно оновлено.",
+  "categoryNameValidation": "Назва категорії має містити щонайменше 3 символи.",
+  "categoryNotFound": "Категорію не знайдено.",
+  "noCategoriesFound": "Жодних категорій не знайдено.",
   "validationFailed": "Помилка у валідації"
 }

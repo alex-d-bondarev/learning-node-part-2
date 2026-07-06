@@ -1,3 +1,8 @@
 {
-  "validationFailed": "Validation failed"
+  "categoryDeletedSuccessfully": "Category deleted successfully.",
+  "categoryUpdatedSuccessfully": "Category updated successfully.",
+  "categoryNameValidation": "Category name must be at least 3 characters long.",
+  "categoryNotFound": "Category not found.",
+  "noCategoriesFound": "No categories found",
+  "validationFailed": "Validation failedю"
 }

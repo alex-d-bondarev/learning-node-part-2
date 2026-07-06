@@ -8,3 +8,7 @@ variables:
     value: api/v1
   - name: locale
     value: uk
+  - name: category_endpoint
+    value: categories
+  - name: category_id
+    value: 6a4a78264c986bbd271d5276
