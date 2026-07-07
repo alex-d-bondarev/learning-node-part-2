@@ -4,5 +4,8 @@
   "categoryNameValidation": "Назва категорії має містити щонайменше 3 символи.",
   "categoryNotFound": "Категорію не знайдено.",
   "noCategoriesFound": "Жодних категорій не знайдено.",
-  "validationFailed": "Помилка у валідації"
+
+  "userRegisteredSuccessfully": "Користувач успішно зареєструвався.",
+
+  "validationFailed": "Помилка у валідації."
 }

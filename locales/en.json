@@ -4,5 +4,8 @@
   "categoryNameValidation": "Category name must be at least 3 characters long.",
   "categoryNotFound": "Category not found.",
   "noCategoriesFound": "No categories found",
-  "validationFailed": "Validation failedю"
+
+  "userRegisteredSuccessfully": "User registered successfully.",
+
+  "validationFailed": "Validation failed."
 }

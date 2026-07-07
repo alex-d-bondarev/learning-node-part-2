@@ -12,3 +12,5 @@ variables:
     value: categories
   - name: category_id
     value: 6a4a78264c986bbd271d5276
+  - name: auth_endpoint
+    value: auth

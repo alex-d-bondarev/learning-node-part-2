@@ -1,22 +1,24 @@
-const express = require("express")
-const mongoose = require("mongoose")
+import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import i18next from "i18next"
+import backend from "i18next-fs-backend"
+import middleware from "i18next-http-middleware";
+import cors from "cors";
+import morgan from "morgan";
 
-require("dotenv").config();
-const i18next = require("i18next")
-const backend = require("i18next-fs-backend")
-const middleware = require("i18next-http-middleware")
-const cors = require("cors")
-const morgan = require("morgan")
+import categoryRouter from "./routes/category.route.js"
+import authRouter from "./routes/auth.routes.js"
 
-const categoryRouter = require("./routes/category.route")
+dotenv.config();
 
 i18next
     .use(backend)
     .use(middleware.LanguageDetector)
     .init({
         fallbackLng: "en",
-        backend:{
-            loadPath:"locales/{{lng}}.json",
+        backend: {
+            loadPath: "locales/{{lng}}.json",
         }
     })
 
@@ -35,6 +37,7 @@ app.use(cors({
 }))
 
 app.use(`${api}/categories`, categoryRouter)
+app.use(`${api}/auth`, authRouter)
 
 app.get(`${api}/health`, (req, res) => {
     res.send(req.t("validationFailed"))
