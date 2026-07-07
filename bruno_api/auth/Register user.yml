@@ -1,0 +1,32 @@
+info:
+  name: Register user
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{app_url}}/{{v1_api}}/{{auth_endpoint}}/register"
+  headers:
+    - name: Accept-Language
+      value: "{{locale}}"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "jane.doe@example.com",
+        "password": "securePass123",
+        "role": "user",
+        "userName": "Jane Doe",
+        "city": "London",
+        "postalCode": "SW1A 1AA",
+        "addressLine1": "221B Baker Street",
+        "addressLine2": "Apartment 4B",
+        "phoneNumber": "+44 7700 900123"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
