@@ -1,11 +1,28 @@
 {
+  "enterValidAddressLine1": "Please enter a valid address.",
+
   "categoryDeletedSuccessfully": "Category deleted successfully.",
   "categoryUpdatedSuccessfully": "Category updated successfully.",
   "categoryNameValidation": "Category name must be at least 3 characters long.",
   "categoryNotFound": "Category not found.",
   "noCategoriesFound": "No categories found",
 
+  "enterValidCity": "Please enter non empty city name.",
+
+  "enterValidEmail": "Please enter a valid email.",
+  "emailAlreadyExists": "Email already exists.",
+
+  "enterNonEmptyPhoneNumber": "Please enter a phone number.",
+  "enterValidPhoneNumber": "Please enter a valid phone number.",
+
+  "passwordMinLength": "The password must be at least 6 characters long.",
+
+  "enterValidPostalCode": "Please enter a valid postal code.",
+
+  "enterValidRole": "The role must be one of: \"admin\", \"user\"",
+
   "userRegisteredSuccessfully": "User registered successfully.",
+  "enterValidUsername": "Please enter non empty username.",
 
   "validationFailed": "Validation failed."
 }

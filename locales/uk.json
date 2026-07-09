@@ -1,11 +1,29 @@
 {
+  "enterValidAddressLine1": "Будь ласка, введіть дійсну адресу.",
+
   "categoryDeletedSuccessfully": "Категорію успішно видалено.",
   "categoryUpdatedSuccessfully": "Категорію успішно оновлено.",
   "categoryNameValidation": "Назва категорії має містити щонайменше 3 символи.",
   "categoryNotFound": "Категорію не знайдено.",
   "noCategoriesFound": "Жодних категорій не знайдено.",
 
+  "enterValidCity": "Будь ласка, введіть назву міста, яка не є порожньою.",
+
+  "enterValidEmail": "Будь ласка, введіть дійсну електронну адресу.",
+  "emailAlreadyExists": "Ця електронна пошта вже зареєстрована.",
+
+  "enterNonEmptyPhoneNumber": "Будь ласка, введіть номер телефону.",
+
+  "passwordMinLength": "Пароль має містити щонайменше 6 символів.",
+
+  "enterValidPhoneNumber": "Будь ласка, введіть дійсний номер телефону.",
+
+  "enterValidPostalCode": "Будь ласка, введіть дійсний поштовий індекс.",
+
+  "enterValidRole": "Роль має бути однією з наступних: \"admin\", \"user\"",
+
   "userRegisteredSuccessfully": "Користувач успішно зареєструвався.",
+  "enterValidUsername": "Будь ласка, введіть непорожнє ім'я користувача.",
 
   "validationFailed": "Помилка у валідації."
 }

@@ -1,11 +1,29 @@
 {
+  "enterValidAddressLine1": "Пожалуйста, введите корректный адрес.",
+
   "categoryDeletedSuccessfully": "Категория успешно удалена.",
   "categoryUpdatedSuccessfully": "Категория успешно обновлена.",
   "categoryNameValidation": "Название категории должно содержать не менее 3 символов.",
   "categoryNotFound": "Категория не найдена.",
   "noCategoriesFound": "Никаких категорий не найдено.",
 
+  "enterValidCity": "Пожалуйста, введите название города (не пустое).",
+
+  "enterValidEmail": "Пожалуйста, введите корректный адрес электронной почты.",
+  "emailAlreadyExists": "Данная электронная почта уже зарегистрирована.",
+
+  "enterNonEmptyPhoneNumber": "Пожалуйста, введите номер телефона.",
+
+  "passwordMinLength": "Пароль должен содержать не менее 6 символов.",
+
+  "enterValidPhoneNumber": "Пожалуйста, введите действительный номер телефона.",
+
+  "enterValidPostalCode": "Пожалуйста, введите действительный почтовый индекс.",
+
+  "enterValidRole": "Роль должна быть одной из следующих: \"admin\", \"user\"",
+
   "userRegisteredSuccessfully": "Пользователь успешно зарегистрирован.",
+  "enterValidUsername": "Пожалуйста, введите имя пользователя (не пустое).",
 
   "validationFailed": "Ошибка в валидации."
 }
