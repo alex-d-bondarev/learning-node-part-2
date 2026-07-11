@@ -31,6 +31,11 @@ export const registerValidation = [
         .matches(/^\+?[0-9]{10,15}$/).withMessage((value, {req}) => req.t("enterValidPhoneNumber")),
 ]
 
+export const loginValidation = [
+    body("email")
+        .isEmail().withMessage((value, {req}) => req.t("enterValidEmail")),
+]
+
 export const handleValidationErrors = (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {

@@ -21,8 +21,13 @@
 
   "enterValidRole": "The role must be one of: \"admin\", \"user\"",
 
+  "invalidToken": "Invalid or expired Token.",
+  "missingToken": "Access token is required.",
+
   "userRegisteredSuccessfully": "User registered successfully.",
   "enterValidUsername": "Please enter non empty username.",
+  "invalidEmailOrPassword": "Invalid email or password.",
+  "loginSuccessful": "Login successful.",
 
   "validationFailed": "Validation failed."
 }

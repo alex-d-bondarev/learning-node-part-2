@@ -22,8 +22,13 @@
 
   "enterValidRole": "Роль має бути однією з наступних: \"admin\", \"user\"",
 
+  "invalidToken": "Недійсний або прострочений токен.",
+  "missingToken": "Потрібен токен доступу.",
+
   "userRegisteredSuccessfully": "Користувач успішно зареєструвався.",
   "enterValidUsername": "Будь ласка, введіть непорожнє ім'я користувача.",
+  "invalidEmailOrPassword": "Недійсна електронна адреса або пароль.",
+  "loginSuccessful": "Вхід успішний.",
 
   "validationFailed": "Помилка у валідації."
 }

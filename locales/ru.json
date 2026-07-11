@@ -22,8 +22,13 @@
 
   "enterValidRole": "Роль должна быть одной из следующих: \"admin\", \"user\"",
 
+  "invalidToken": "Недействительный или просроченный токен.",
+  "missingToken": "Требуется токен доступа.",
+
   "userRegisteredSuccessfully": "Пользователь успешно зарегистрирован.",
   "enterValidUsername": "Пожалуйста, введите имя пользователя (не пустое).",
+  "invalidEmailOrPassword": "Неверный адрес электронной почты или пароль.",
+  "loginSuccessful": "Вход выполнен успешно.",
 
   "validationFailed": "Ошибка в валидации."
 }
