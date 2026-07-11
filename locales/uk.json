@@ -29,6 +29,7 @@
   "enterValidUsername": "Будь ласка, введіть непорожнє ім'я користувача.",
   "invalidEmailOrPassword": "Недійсна електронна адреса або пароль.",
   "loginSuccessful": "Вхід успішний.",
+  "userNotFound": "Користувача не знайдено.",
 
   "validationFailed": "Помилка у валідації."
 }

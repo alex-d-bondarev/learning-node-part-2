@@ -29,6 +29,7 @@
   "enterValidUsername": "Пожалуйста, введите имя пользователя (не пустое).",
   "invalidEmailOrPassword": "Неверный адрес электронной почты или пароль.",
   "loginSuccessful": "Вход выполнен успешно.",
+  "userNotFound": "Пользователь не найден.",
 
   "validationFailed": "Ошибка в валидации."
 }

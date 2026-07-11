@@ -69,4 +69,24 @@ router.post("/login", loginValidation, handleValidationErrors, async (req, res) 
     }
 })
 
+router.get("/profile", async (req, res) => {
+    try {
+        const user = await User.findById(req.auth.id).select("-password")
+
+        if (!user) {
+            res.status(404).json({
+                success: false,
+                message: req.t("userNotFound"),
+            })
+        }
+
+        res.json({
+            success: true,
+            data: user,
+        })
+    } catch (error) {
+
+    }
+})
+
 export default router;

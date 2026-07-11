@@ -15,7 +15,9 @@ http:
       {
         "name": "BB Category"
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{login_token}}"
 
 settings:
   encodeUrl: true

@@ -15,7 +15,9 @@ http:
       {
         "name": "phones"
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{login_token}}"
 
 settings:
   encodeUrl: true
