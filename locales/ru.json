@@ -30,6 +30,7 @@
   "invalidEmailOrPassword": "Неверный адрес электронной почты или пароль.",
   "loginSuccessful": "Вход выполнен успешно.",
   "userNotFound": "Пользователь не найден.",
+  "profileUpdatedSuccessfully": "Профиль пользователя успешно обновлен.",
 
   "validationFailed": "Ошибка в валидации."
 }

@@ -30,6 +30,7 @@
   "invalidEmailOrPassword": "Недійсна електронна адреса або пароль.",
   "loginSuccessful": "Вхід успішний.",
   "userNotFound": "Користувача не знайдено.",
+  "profileUpdatedSuccessfully": "Профіль користувача успішно оновлено.",
 
   "validationFailed": "Помилка у валідації."
 }

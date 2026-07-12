@@ -1,0 +1,30 @@
+info:
+  name: Update user profile
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{app_url}}/{{v1_api}}/{{auth_endpoint}}/profile"
+  headers:
+    - name: Accept-Language
+      value: "{{locale}}"
+  body:
+    type: json
+    data: |-
+      {
+        "userName": " ",
+        "city": "Test",
+        "postalCode": "44444",
+        "addressLine1": "221B Baker Street 2",
+        "email": "jane.doe2@example.com"
+      }
+  auth:
+    type: bearer
+    token: "{{login_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

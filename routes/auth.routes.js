@@ -3,7 +3,7 @@ import User from "../models/user.model.js";
 import {
     handleValidationErrors,
     loginValidation,
-    registerValidation,
+    registerValidation, updateValidation,
 } from "../validators/auth.validator.js";
 import {generateToken} from "../helpers/jwt.js";
 import {handleRouteError} from "../helpers/error-handling.js";
@@ -85,7 +85,53 @@ router.get("/profile", async (req, res) => {
             data: user,
         })
     } catch (error) {
+        handleRouteError(error, res);
+    }
+})
 
+router.put("/profile", updateValidation, handleValidationErrors, async (req, res) => {
+    try {
+
+        const userId = req.auth.id;
+        const updateBody = req.body;
+
+        if (updateBody.email) {
+            const existingUserByEmail = await User.findOne({
+                email: updateBody.email,
+                _id: {$ne: userId}
+            })
+
+            if (existingUserByEmail) {
+                return res.status(400).json({
+                    success: false,
+                    message: req.t("emailAlreadyExists")
+                })
+            }
+        }
+
+        const user = await User.findById(userId)
+
+        if (!user) {
+            res.status(404).json({
+                success: false,
+                message: req.t("userNotFound"),
+            })
+        }
+
+        Object.keys(updateBody).forEach((key) => {
+            user[key] = updateBody[key];
+        })
+
+        await user.save()
+
+        res.json({
+            success: true,
+            message: req.t("profileUpdatedSuccessfully"),
+            data: user,
+        })
+
+    } catch (error) {
+        handleRouteError(error, res);
     }
 })
 

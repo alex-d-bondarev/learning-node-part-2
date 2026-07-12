@@ -29,6 +29,7 @@
   "invalidEmailOrPassword": "Invalid email or password.",
   "loginSuccessful": "Login successful.",
   "userNotFound": "User not found.",
+  "profileUpdatedSuccessfully": "User profile updated successfully.",
 
   "validationFailed": "Validation failed."
 }
