@@ -13,10 +13,10 @@ http:
     type: json
     data: |-
       {
-        "email": "jane.doe2@example.com",
+        "email": "big.brother@example.com",
         "password": "securePass123",
-        "role": "user",
-        "userName": "Jane Doe",
+        "role": "admin",
+        "userName": "Big Brother",
         "city": "London",
         "postalCode": "SW1A 1AA",
         "addressLine1": "221B Baker Street",

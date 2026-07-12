@@ -20,7 +20,9 @@
 
   "enterValidPostalCode": "Будь ласка, введіть дійсний поштовий індекс.",
 
+  "authRequired": "Потрібна автентифікація.",
   "enterValidRole": "Роль має бути однією з наступних: \"admin\", \"user\"",
+  "insufficientPermissions": "Недостатньо дозволів.",
 
   "invalidToken": "Недійсний або прострочений токен.",
   "missingToken": "Потрібен токен доступу.",

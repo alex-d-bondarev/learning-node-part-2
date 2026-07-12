@@ -19,7 +19,9 @@
 
   "enterValidPostalCode": "Please enter a valid postal code.",
 
+  "authRequired": "Authentication required.",
   "enterValidRole": "The role must be one of: \"admin\", \"user\"",
+  "insufficientPermissions": "Insufficient Permissions.",
 
   "invalidToken": "Invalid or expired Token.",
   "missingToken": "Access token is required.",
