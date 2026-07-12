@@ -9,8 +9,18 @@
 
   "enterValidCity": "Пожалуйста, введите название города (не пустое).",
 
+  "mandatoryCountInStockValidation": "Необходимо провести инвентаризацию товарных запасов.",
+  "maxCountInStockValidation": "Количество товара на складе не может превышать 99 999.",
+  "minCountInStockValidation": "Количество товара на складе не может быть отрицательным.",
+
+  "descriptionNameMaxLength": "Значение поля «Description» не должно превышать 255 символов.",
+  "descriptionNameMinLength": "Значение поля «Описание» должно содержать не менее 5 символов.",
+  "mandatoryDescriptionValidation": "Необходимо указать значение для поля «Описание».",
+
   "enterValidEmail": "Пожалуйста, введите корректный адрес электронной почты.",
   "emailAlreadyExists": "Данная электронная почта уже зарегистрирована.",
+
+  "mandatoryImagesValidation": "Требуется как минимум одно изображение.",
 
   "enterNonEmptyPhoneNumber": "Пожалуйста, введите номер телефона.",
 
@@ -19,6 +29,17 @@
   "enterValidPhoneNumber": "Пожалуйста, введите действительный номер телефона.",
 
   "enterValidPostalCode": "Пожалуйста, введите действительный почтовый индекс.",
+
+  "minPriceValidation": "Цена не может быть отрицательной.",
+  "priceIsRequired": "Необходимо указать цену.",
+
+  "productNameMaxLength": "Название товара не должно превышать 100 символов.",
+  "productNameMinLength": "Название товара должно содержать не менее 2 символов.",
+  "productNameRequired": "Необходимо указать название продукта.",
+
+  "maxRatingValidation": "Рейтинг товара не может превышать 5.",
+  "minRatingValidation": "Рейтинг товара не может быть ниже 0.",
+  "minRatingCountValidation": "Количество оценок товара не может быть меньше 0.",
 
   "authRequired": "Требуется аутентификация.",
   "enterValidRole": "Роль должна быть одной из следующих: \"admin\", \"user\"",
@@ -34,5 +55,7 @@
   "userNotFound": "Пользователь не найден.",
   "profileUpdatedSuccessfully": "Профиль пользователя успешно обновлен.",
 
-  "validationFailed": "Ошибка в валидации."
+  "validationFailed": "Ошибка в валидации.",
+
+  "minViewsValidation": "Количество просмотров не может быть меньше 0."
 }

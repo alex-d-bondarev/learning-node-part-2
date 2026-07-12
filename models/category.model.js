@@ -5,6 +5,6 @@ const categorySchema = mongoose.Schema({
     name: String,
 })
 
-addCommonVirtuals(categorySchema)
+categorySchema.plugin(addCommonVirtuals)
 
 export const Category = mongoose.model("Category", categorySchema)

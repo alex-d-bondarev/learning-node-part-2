@@ -9,8 +9,18 @@
 
   "enterValidCity": "Будь ласка, введіть назву міста, яка не є порожньою.",
 
+  "mandatoryCountInStockValidation": "Потрібна інформація про наявність товару на складі.",
+  "maxCountInStockValidation": "Кількість товару на складі не може перевищувати 99 999.",
+  "minCountInStockValidation": "Кількість товарних запасів не може бути від'ємним числом.",
+
+  "descriptionNameMaxLength": "Значення «Опису» не повинно перевищувати 255 символів.",
+  "descriptionNameMinLength": "Значення «Опис» має містити щонайменше 5 символів.",
+  "mandatoryDescriptionValidation": "Обов'язкове значення \"Опис\".",
+
   "enterValidEmail": "Будь ласка, введіть дійсну електронну адресу.",
   "emailAlreadyExists": "Ця електронна пошта вже зареєстрована.",
+
+  "mandatoryImagesValidation": "Потрібне хоча б одне зображення.",
 
   "enterNonEmptyPhoneNumber": "Будь ласка, введіть номер телефону.",
 
@@ -19,6 +29,17 @@
   "enterValidPhoneNumber": "Будь ласка, введіть дійсний номер телефону.",
 
   "enterValidPostalCode": "Будь ласка, введіть дійсний поштовий індекс.",
+
+  "minPriceValidation": "Ціна не може бути від'ємною.",
+  "priceIsRequired": "Ціна обов'язкова.",
+
+  "productNameMaxLength": "Назва продукту не повинна перевищувати 100 символів.",
+  "productNameMinLength": "Назва продукту має містити щонайменше 2 символи.",
+  "productNameRequired": "Назва продукту обов'язкова.",
+
+  "maxRatingValidation": "Оцінка продукту не може бути вище 5.",
+  "minRatingValidation": "Рейтинг продукту не може бути нижче 0.",
+  "minRatingCountValidation": "Кількість оцінок продукту не може бути меншою за 0.",
 
   "authRequired": "Потрібна автентифікація.",
   "enterValidRole": "Роль має бути однією з наступних: \"admin\", \"user\"",
@@ -34,5 +55,7 @@
   "userNotFound": "Користувача не знайдено.",
   "profileUpdatedSuccessfully": "Профіль користувача успішно оновлено.",
 
-  "validationFailed": "Помилка у валідації."
+  "validationFailed": "Помилка у валідації.",
+
+  "minViewsValidation": "Кількість переглядів не може бути меншою за 0."
 }

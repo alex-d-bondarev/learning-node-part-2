@@ -9,8 +9,18 @@
 
   "enterValidCity": "Please enter non empty city name.",
 
+  "mandatoryCountInStockValidation": "Product stock count is required.",
+  "maxCountInStockValidation": "Product stock count cannot be above 99,999.",
+  "minCountInStockValidation": "Product stock count cannot be negative.",
+
+  "descriptionNameMaxLength": "'Description' value must not exceed 255 characters.",
+  "descriptionNameMinLength": "'Description' value must be at least 5 characters.",
+  "mandatoryDescriptionValidation": "Description value is required.",
+
   "enterValidEmail": "Please enter a valid email.",
   "emailAlreadyExists": "Email already exists.",
+
+  "mandatoryImagesValidation": "At least one image is required.",
 
   "enterNonEmptyPhoneNumber": "Please enter a phone number.",
   "enterValidPhoneNumber": "Please enter a valid phone number.",
@@ -18,6 +28,17 @@
   "passwordMinLength": "The password must be at least 6 characters long.",
 
   "enterValidPostalCode": "Please enter a valid postal code.",
+
+  "minPriceValidation": "Price cannot be negative.",
+  "priceIsRequired": "Price is required.",
+
+  "productNameMaxLength": "Product name must not exceed 100 characters.",
+  "productNameMinLength": "Product name must be at least 2 characters.",
+  "productNameRequired": "Product name is required.",
+
+  "maxRatingValidation": "Product rating cannot be above 5.",
+  "minRatingValidation": "Product rating cannot be below 0.",
+  "minRatingCountValidation": "Product rating count cannot be below 0.",
 
   "authRequired": "Authentication required.",
   "enterValidRole": "The role must be one of: \"admin\", \"user\"",
@@ -33,5 +54,7 @@
   "userNotFound": "User not found.",
   "profileUpdatedSuccessfully": "User profile updated successfully.",
 
-  "validationFailed": "Validation failed."
+  "validationFailed": "Validation failed.",
+
+  "minViewsValidation": "Number of views cannot be below 0."
 }

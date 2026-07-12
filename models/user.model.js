@@ -78,7 +78,7 @@ userSchema.methods.toJSON = function () {
     return user;
 }
 
-addCommonVirtuals(userSchema)
+userSchema.plugin(addCommonVirtuals)
 
 const User = mongoose.model("User", userSchema)
 export default User
