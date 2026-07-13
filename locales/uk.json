@@ -23,7 +23,6 @@
   "mandatoryImagesValidation": "Потрібне хоча б одне зображення.",
 
   "enterNonEmptyPhoneNumber": "Будь ласка, введіть номер телефону.",
-
   "passwordMinLength": "Пароль має містити щонайменше 6 символів.",
 
   "enterValidPhoneNumber": "Будь ласка, введіть дійсний номер телефону.",
@@ -32,6 +31,8 @@
 
   "minPriceValidation": "Ціна не може бути від'ємною.",
   "priceIsRequired": "Ціна обов'язкова.",
+
+  "productCreatedSuccessfully": "Продукт успішно створено.",
 
   "productNameMaxLength": "Назва продукту не повинна перевищувати 100 символів.",
   "productNameMinLength": "Назва продукту має містити щонайменше 2 символи.",

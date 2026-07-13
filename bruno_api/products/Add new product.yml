@@ -1,0 +1,30 @@
+info:
+  name: Add new product
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{app_url}}/{{v1_api}}/{{products_endpoint}}"
+  headers:
+    - name: Accept-Language
+      value: "{{locale}}"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "eyePhone 27",
+        "price": 16000,
+        "category": "6a5290ed015c7afb7a1527a4",
+        "countInStock": 1000,
+        "description": "Shut up and take my money!"
+      }
+  auth:
+    type: bearer
+    token: "{{login_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

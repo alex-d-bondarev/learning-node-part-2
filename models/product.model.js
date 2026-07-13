@@ -1,14 +1,13 @@
 import mongoose from "mongoose";
-import r from "multer/lib/file-appender.js";
 import {addCommonVirtuals} from "../helpers/mongoose-plugin.js";
 
 const productSchema = new mongoose.Schema({
         title: {
             type: String,
-            required: [true, req.t("productNameRequired")],
+            required: [true],
             trim: true,
-            minlength: [2, req.t("productNameMinLength")],
-            maxLength: [100, req.t("productNameMaxLength")],
+            minlength: [2],
+            maxLength: [100]
         },
 
         category: {
@@ -31,10 +30,10 @@ const productSchema = new mongoose.Schema({
             maxLength: [255, req.t("descriptionNameMaxLength")],
         },
 
-        images: {
-            type: [String],
-            required: [true, req.t("mandatoryImagesValidation")],
-        },
+        // images: {
+        //     type: [String],
+        //     required: [true, req.t("mandatoryImagesValidation")],
+        // },
 
         countInStock: {
             type: Number,

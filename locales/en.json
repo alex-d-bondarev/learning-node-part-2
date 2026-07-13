@@ -32,6 +32,8 @@
   "minPriceValidation": "Price cannot be negative.",
   "priceIsRequired": "Price is required.",
 
+  "productCreatedSuccessfully": "Product created successfully.",
+
   "productNameMaxLength": "Product name must not exceed 100 characters.",
   "productNameMinLength": "Product name must be at least 2 characters.",
   "productNameRequired": "Product name is required.",

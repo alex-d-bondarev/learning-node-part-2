@@ -23,7 +23,6 @@
   "mandatoryImagesValidation": "Требуется как минимум одно изображение.",
 
   "enterNonEmptyPhoneNumber": "Пожалуйста, введите номер телефона.",
-
   "passwordMinLength": "Пароль должен содержать не менее 6 символов.",
 
   "enterValidPhoneNumber": "Пожалуйста, введите действительный номер телефона.",
@@ -32,6 +31,8 @@
 
   "minPriceValidation": "Цена не может быть отрицательной.",
   "priceIsRequired": "Необходимо указать цену.",
+
+  "productCreatedSuccessfully": "Продукт успешно создан.",
 
   "productNameMaxLength": "Название товара не должно превышать 100 символов.",
   "productNameMinLength": "Название товара должно содержать не менее 2 символов.",
