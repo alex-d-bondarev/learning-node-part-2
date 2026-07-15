@@ -9,9 +9,6 @@ http:
   headers:
     - name: Accept-Language
       value: "{{locale}}"
-  auth:
-    type: bearer
-    token: "{{login_token}}"
 
 settings:
   encodeUrl: true

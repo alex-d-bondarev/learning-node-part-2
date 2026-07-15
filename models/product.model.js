@@ -35,10 +35,11 @@ const productSchema = new mongoose.Schema({
             // maxLength: [255, req.t("descriptionNameMaxLength")],
         },
 
-        // images: {
-        //     type: [String],
-        //     required: [true, req.t("mandatoryImagesValidation")],
-        // },
+        images: {
+            type: [String],
+            required: [true, "mandatoryImagesValidation"],
+            // required: [true, req.t("mandatoryImagesValidation")],
+        },
 
         countInStock: {
             type: Number,

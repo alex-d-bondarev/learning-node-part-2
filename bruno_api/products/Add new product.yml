@@ -10,15 +10,28 @@ http:
     - name: Accept-Language
       value: "{{locale}}"
   body:
-    type: json
-    data: |-
-      {
-        "title": "eyePhone 27",
-        "price": 16000,
-        "category": "6a5290ed015c7afb7a1527a4",
-        "countInStock": 1000,
-        "description": "Shut up and take my money!"
-      }
+    type: multipart-form
+    data:
+      - name: title
+        type: text
+        value: macbook 42_2
+      - name: price
+        type: text
+        value: "172000"
+      - name: category
+        type: text
+        value: 6a5290ed015c7afb7a1527a4
+      - name: countInStock
+        type: text
+        value: "3"
+      - name: description
+        type: text
+        value: almost fits the pocket
+      - name: images
+        type: file
+        value:
+          - /Users/sasha/Downloads/macBook_4_1.jpg
+        contentType: image/jpeg
   auth:
     type: bearer
     token: "{{login_token}}"

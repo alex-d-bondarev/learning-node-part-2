@@ -9,20 +9,18 @@ if (!fs.existsSync(UPLOAD_DIR)) {
 }
 
 const storage = multer.diskStorage({
-    destination: (req, file, callback) => {
+    destination: (req, file, cb) => {
         cb(null, UPLOAD_DIR);
     },
-    filename: (req, file, callback) => {
-        const uniqueSuffix = Date.now() + "-" + Math.round(Math.round() * 1e9)
-
+    filename: (req, file, cb) => {
+        const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9)
         const extension = path.extname(file.originalname);
-
         cb(null, `product-${uniqueSuffix}${extension}`);
     }
 })
 
-const fileFilter = (req, file, callback) => {
-    if(file.mimetype.startsWith("image/")){
+const fileFilter = (req, file, cb) => {
+    if (file.mimetype.startsWith("image/")) {
         cb(null, true);
     } else {
         cb(new Error("Only image files are allowed"), false);
@@ -33,10 +31,16 @@ const upload = multer({
     storage: storage,
     fileFilter: fileFilter,
     limits: {
-        fileSize: 5 * 1024 * 1024 // 5 MB
+        fileSize: 5 * 1024 * 1024, // 5 MB
         files: 10
     }
 })
 
 export const uploadSingle = upload.single("image");
 export const uploadMultiple = upload.array("images", 10);
+
+export const getFileUrl = (req, filename) => {
+    const protocol = req.protocol
+    const host = req.get("host");
+    return `${protocol}://${host}/public/uploads/${filename}`;
+}

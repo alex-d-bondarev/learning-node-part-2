@@ -1,2 +1,6 @@
+# general
 .env
 node_modules
+
+# Uploaded files
+**/uploads
