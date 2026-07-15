@@ -36,11 +36,57 @@ const upload = multer({
     }
 })
 
-export const uploadSingle = upload.single("image");
-export const uploadMultiple = upload.array("images", 10);
+const uploadSingle = upload.single("image");
+const uploadMultiple = upload.array("images", 10);
 
-export const getFileUrl = (req, filename) => {
+const getFileUrl = (req, filename) => {
     const protocol = req.protocol
     const host = req.get("host");
     return `${protocol}://${host}/public/uploads/${filename}`;
+}
+
+const handleUploadError = (error, req, res, next) => {
+    if (error instanceof multer.MulterError) {
+        switch (error.code) {
+
+            case "LIMIT_FILE_SIZE":
+                res.status(400).json({
+                    success: false,
+                    message: req.t("fileSizeLimitExceeded5MB"),
+                })
+
+            case "LIMIT_FILE_COUNT":
+                res.status(400).json({
+                    success: false,
+                    message: req.t("fileCountLimit10Files"),
+                })
+
+            case "LIMIT_UNEXPECTED_FILE":
+                res.status(400).json({
+                    success: false,
+                    message: req.t("unexpectedFile"),
+                })
+
+            default:
+                res.status(400).json({
+                    success: false,
+                    message: req.t("unexpectedUploadError"),
+                })
+        }
+
+    } else if (error) {
+        return res.status(400).json({
+            success: false,
+            message: error.message,
+        })
+    }
+
+    next()
+}
+
+export {
+    uploadSingle,
+    uploadMultiple,
+    handleUploadError,
+    getFileUrl,
 }

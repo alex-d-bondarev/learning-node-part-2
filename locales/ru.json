@@ -1,62 +1,67 @@
 {
+  "__auth": "section",
+  "authRequired": "Требуется аутентификация.",
+  "enterValidRole": "Роль должна быть одной из следующих: \"admin\", \"user\"",
+  "insufficientPermissions": "Недостаточно прав.",
+  "invalidToken": "Недействительный или просроченный токен.",
+  "missingToken": "Требуется токен доступа.",
+  "__address": "section",
   "enterValidAddressLine1": "Пожалуйста, введите корректный адрес.",
-
+  "__category": "section",
   "categoryDeletedSuccessfully": "Категория успешно удалена.",
   "categoryUpdatedSuccessfully": "Категория успешно обновлена.",
   "categoryNameValidation": "Название категории должно содержать не менее 3 символов.",
   "categoryNotFound": "Категория не найдена.",
   "noCategoriesFound": "Никаких категорий не найдено.",
-
+  "__city": "section",
   "enterValidCity": "Пожалуйста, введите название города (не пустое).",
-
+  "__count_in_stock": "section",
   "mandatoryCountInStockValidation": "Необходимо провести инвентаризацию товарных запасов.",
   "maxCountInStockValidation": "Количество товара на складе не может превышать 99 999.",
   "minCountInStockValidation": "Количество товара на складе не может быть отрицательным.",
-
+  "__description": "section",
   "descriptionNameMaxLength": "Значение поля «Description» не должно превышать 255 символов.",
   "descriptionNameMinLength": "Значение поля «Описание» должно содержать не менее 5 символов.",
   "mandatoryDescriptionValidation": "Необходимо указать значение для поля «Описание».",
-
+  "__email": "section",
   "enterValidEmail": "Пожалуйста, введите корректный адрес электронной почты.",
   "emailAlreadyExists": "Данная электронная почта уже зарегистрирована.",
-
+  "__file": "section",
+  "fileCountLimit10Files": "Количество файлов более 10 не поддерживается.",
+  "fileSizeLimitExceeded5MB": "Файлы размером более 5 МБ не поддерживаются.",
+  "unexpectedFile": "Тип файла не поддерживается.",
+  "unexpectedUploadError": "Непредвиденная ошибка при загрузке файла.",
+  "__general": "section",
+  "validationFailed": "Ошибка в валидации.",
+  "__images": "section",
   "mandatoryImagesValidation": "Требуется как минимум одно изображение.",
-
+  "__password": "section",
+  "enterValidPhoneNumber": "Пожалуйста, введите действительный номер телефона.",
+  "__phone_number": "section",
   "enterNonEmptyPhoneNumber": "Пожалуйста, введите номер телефона.",
   "passwordMinLength": "Пароль должен содержать не менее 6 символов.",
-
-  "enterValidPhoneNumber": "Пожалуйста, введите действительный номер телефона.",
-
+  "__postal_code": "section",
   "enterValidPostalCode": "Пожалуйста, введите действительный почтовый индекс.",
-
+  "__price": "section",
   "minPriceValidation": "Цена не может быть отрицательной.",
   "priceIsRequired": "Необходимо указать цену.",
-
+  "__product": "section",
   "productCreatedSuccessfully": "Продукт успешно создан.",
-
+  "__product_name": "section",
   "productNameMaxLength": "Название товара не должно превышать 100 символов.",
   "productNameMinLength": "Название товара должно содержать не менее 2 символов.",
   "productNameRequired": "Необходимо указать название продукта.",
-
+  "__rating": "section",
   "maxRatingValidation": "Рейтинг товара не может превышать 5.",
   "minRatingValidation": "Рейтинг товара не может быть ниже 0.",
   "minRatingCountValidation": "Количество оценок товара не может быть меньше 0.",
-
-  "authRequired": "Требуется аутентификация.",
-  "enterValidRole": "Роль должна быть одной из следующих: \"admin\", \"user\"",
-  "insufficientPermissions": "Недостаточно прав.",
-
-  "invalidToken": "Недействительный или просроченный токен.",
-  "missingToken": "Требуется токен доступа.",
-
+  "__user": "section",
   "userRegisteredSuccessfully": "Пользователь успешно зарегистрирован.",
   "enterValidUsername": "Пожалуйста, введите имя пользователя (не пустое).",
   "invalidEmailOrPassword": "Неверный адрес электронной почты или пароль.",
   "loginSuccessful": "Вход выполнен успешно.",
   "userNotFound": "Пользователь не найден.",
   "profileUpdatedSuccessfully": "Профиль пользователя успешно обновлен.",
-
-  "validationFailed": "Ошибка в валидации.",
-
+  "__views": "section",
   "minViewsValidation": "Количество просмотров не может быть меньше 0."
 }

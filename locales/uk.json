@@ -1,62 +1,67 @@
 {
+  "__auth": "section",
+  "authRequired": "Потрібна автентифікація.",
+  "enterValidRole": "Роль має бути однією з наступних: \"admin\", \"user\"",
+  "insufficientPermissions": "Недостатньо дозволів.",
+  "invalidToken": "Недійсний або прострочений токен.",
+  "missingToken": "Потрібен токен доступу.",
+  "__address": "section",
   "enterValidAddressLine1": "Будь ласка, введіть дійсну адресу.",
-
+  "__category": "section",
   "categoryDeletedSuccessfully": "Категорію успішно видалено.",
   "categoryUpdatedSuccessfully": "Категорію успішно оновлено.",
   "categoryNameValidation": "Назва категорії має містити щонайменше 3 символи.",
   "categoryNotFound": "Категорію не знайдено.",
   "noCategoriesFound": "Жодних категорій не знайдено.",
-
+  "__city": "section",
   "enterValidCity": "Будь ласка, введіть назву міста, яка не є порожньою.",
-
+  "__count_in_stock": "section",
   "mandatoryCountInStockValidation": "Потрібна інформація про наявність товару на складі.",
   "maxCountInStockValidation": "Кількість товару на складі не може перевищувати 99 999.",
   "minCountInStockValidation": "Кількість товарних запасів не може бути від'ємним числом.",
-
+  "__description": "section",
   "descriptionNameMaxLength": "Значення «Опису» не повинно перевищувати 255 символів.",
   "descriptionNameMinLength": "Значення «Опис» має містити щонайменше 5 символів.",
   "mandatoryDescriptionValidation": "Обов'язкове значення \"Опис\".",
-
+  "__email": "section",
   "enterValidEmail": "Будь ласка, введіть дійсну електронну адресу.",
   "emailAlreadyExists": "Ця електронна пошта вже зареєстрована.",
-
+  "__file": "section",
+  "fileCountLimit10Files": "Кількість файлів понад 10 не підтримується.",
+  "fileSizeLimitExceeded5MB": "Розмір файлу понад 5 МБ не підтримується.",
+  "unexpectedFile": "Тип файлу не підтримується.",
+  "unexpectedUploadError": "Неочікувана помилка завантаження файлу.",
+  "__general": "section",
+  "validationFailed": "Помилка у валідації.",
+  "__images": "section",
   "mandatoryImagesValidation": "Потрібне хоча б одне зображення.",
-
+  "__password": "section",
+  "enterValidPhoneNumber": "Будь ласка, введіть дійсний номер телефону.",
+  "__phone_number": "section",
   "enterNonEmptyPhoneNumber": "Будь ласка, введіть номер телефону.",
   "passwordMinLength": "Пароль має містити щонайменше 6 символів.",
-
-  "enterValidPhoneNumber": "Будь ласка, введіть дійсний номер телефону.",
-
+  "__postal_code": "section",
   "enterValidPostalCode": "Будь ласка, введіть дійсний поштовий індекс.",
-
+  "__price": "section",
   "minPriceValidation": "Ціна не може бути від'ємною.",
   "priceIsRequired": "Ціна обов'язкова.",
-
+  "__product": "section",
   "productCreatedSuccessfully": "Продукт успішно створено.",
-
+  "__product_name": "section",
   "productNameMaxLength": "Назва продукту не повинна перевищувати 100 символів.",
   "productNameMinLength": "Назва продукту має містити щонайменше 2 символи.",
   "productNameRequired": "Назва продукту обов'язкова.",
-
+  "__rating": "section",
   "maxRatingValidation": "Оцінка продукту не може бути вище 5.",
   "minRatingValidation": "Рейтинг продукту не може бути нижче 0.",
   "minRatingCountValidation": "Кількість оцінок продукту не може бути меншою за 0.",
-
-  "authRequired": "Потрібна автентифікація.",
-  "enterValidRole": "Роль має бути однією з наступних: \"admin\", \"user\"",
-  "insufficientPermissions": "Недостатньо дозволів.",
-
-  "invalidToken": "Недійсний або прострочений токен.",
-  "missingToken": "Потрібен токен доступу.",
-
+  "__user": "section",
   "userRegisteredSuccessfully": "Користувач успішно зареєструвався.",
   "enterValidUsername": "Будь ласка, введіть непорожнє ім'я користувача.",
   "invalidEmailOrPassword": "Недійсна електронна адреса або пароль.",
   "loginSuccessful": "Вхід успішний.",
   "userNotFound": "Користувача не знайдено.",
   "profileUpdatedSuccessfully": "Профіль користувача успішно оновлено.",
-
-  "validationFailed": "Помилка у валідації.",
-
+  "__views": "section",
   "minViewsValidation": "Кількість переглядів не може бути меншою за 0."
 }
