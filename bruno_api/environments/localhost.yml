@@ -17,4 +17,4 @@ variables:
   - name: products_endpoint
     value: products
   - name: product_id
-    value: 6a5b8dd31cc4a7ec1ac61e6b
+    value: 6a57c486917fa3e21626ec45

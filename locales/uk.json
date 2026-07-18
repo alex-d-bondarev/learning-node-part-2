@@ -51,6 +51,7 @@
   "priceNumberValidation": "Ціна має бути числом.",
   "__product": "section",
   "productCreatedSuccessfully": "Продукт успішно створено.",
+  "productDeletedSuccessfully": "Товар успішно видалено.",
   "noProductsFound": "Не знайдено жодних товарів.",
   "__product_title": "section",
   "productTitleMaxLength": "Назва продукту не повинна перевищувати 100 символів.",

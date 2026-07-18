@@ -51,6 +51,7 @@
   "priceNumberValidation": "Цена должна быть числом.",
   "__product": "section",
   "productCreatedSuccessfully": "Продукт успешно создан.",
+  "productDeletedSuccessfully": "Товар успешно удален.",
   "noProductsFound": "Товары не найдены.",
   "__product_title": "section",
   "productTitleMaxLength": "Название товара не должно превышать 100 символов.",

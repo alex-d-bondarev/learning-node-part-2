@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{app_url}}/{{v1_api}}/{{products_endpoint}}?page=3&limit=5"
+  url: "{{app_url}}/{{v1_api}}/{{products_endpoint}}?page=3&limit=25"
   headers:
     - name: Accept-Language
       value: "{{locale}}"
@@ -14,7 +14,7 @@ http:
       value: "3"
       type: query
     - name: limit
-      value: "5"
+      value: "25"
       type: query
   body:
     type: multipart-form

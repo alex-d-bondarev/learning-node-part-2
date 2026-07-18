@@ -2,7 +2,7 @@ import express from "express";
 import {ProductModel} from "../models/product.model.js";
 import {handleRouteError} from "../helpers/error-handling.js";
 import {getFileUrl, handleUploadError, uploadMultiple} from "../middleware/upload.middleware.js";
-import {adminOnly} from "../middleware/roles.middleware.js";
+import {adminOnly, userAndAdmin} from "../middleware/roles.middleware.js";
 import {createProductValidation} from "../validators/product.validator.js";
 import {handleValidationErrors} from "../validators/auth.validator.js";
 
@@ -45,7 +45,7 @@ router.post(
         }
     })
 
-router.get("/", async (req, res) => {
+router.get("/", userAndAdmin, async (req, res) => {
     try {
 
         const search = req.query.search
@@ -105,7 +105,7 @@ router.get("/", async (req, res) => {
     }
 })
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", userAndAdmin, async (req, res) => {
     try {
 
         const product = await ProductModel.findByIdAndUpdate(
@@ -124,6 +124,19 @@ router.get("/:id", async (req, res) => {
 
     } catch (error) {
         handleRouteError(err, res)
+    }
+})
+
+router.delete("/:id", adminOnly, async (req, res) => {
+    try {
+        const deletedProduct = await ProductModel.findByIdAndDelete(req.params.id)
+        if (!deletedProduct) {
+            return res.status(404).send({message: req.t("noProductsFound")})
+        }
+
+        return res.status(200).send({message: req.t("productDeletedSuccessfully")})
+    } catch (err) {
+        res.status(400).send({message: err.message})
     }
 })
 
