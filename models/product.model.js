@@ -13,7 +13,6 @@ const productSchema = new mongoose.Schema({
         category: {
             type: mongoose.Schema.Types.ObjectId,
             required: [true, "categoryNameValidation"],
-            // required: [true, req.t("categoryNameValidation")],
             ref: "Category",
         },
 
@@ -21,35 +20,27 @@ const productSchema = new mongoose.Schema({
             type: Number,
             required: [true],
             min: [0, "minPriceValidation"],
-            // min: [0, req.t("minPriceValidation")],
         },
 
         description: {
             type: String,
             required: [true, "mandatoryDescriptionValidation"],
-            // required: [true, req.t("mandatoryDescriptionValidation")],
             trim: true,
             minlength: [5, "descriptionNameMinLength"],
-            // minlength: [5, req.t("descriptionNameMinLength")],
             maxLength: [255, "descriptionNameMaxLength"],
-            // maxLength: [255, req.t("descriptionNameMaxLength")],
         },
 
         images: {
             type: [String],
             required: [true, "mandatoryImagesValidation"],
-            // required: [true, req.t("mandatoryImagesValidation")],
         },
 
         countInStock: {
             type: Number,
-            required: [true, "mandatoryCountInStockValidation"],
-            // required: [true, req.t("mandatoryCountInStockValidation")],
-            min: [0, "minCountInStockValidation"],
-            // min: [0, req.t("minCountInStockValidation")],
-            max: [99999, "maxCountInStockValidation"],
-            // max: [99999, req.t("maxCountInStockValidation")],
             default: 0,
+            required: false,
+            min: [0, "minCountInStockValidation"],
+            max: [99999, "maxCountInStockValidation"],
         },
 
         rating: {
@@ -57,15 +48,12 @@ const productSchema = new mongoose.Schema({
                 type: Number,
                 default: 5,
                 min: [0, "minRatingValidation"],
-                // min: [0, req.t("minRatingValidation")],
                 max: [5, "maxRatingValidation"],
-                // max: [5, req.t("maxRatingValidation")],
             },
             count: {
                 type: Number,
                 default: 0,
                 min: [0, "minRatingCountValidation"],
-                // min: [0, req.t("minRatingCountValidation")],
             }
         },
 
@@ -73,7 +61,6 @@ const productSchema = new mongoose.Schema({
             type: Number,
             default: 0,
             min: [0, "minViewsValidation"],
-            // min: [0, req.t("minViewsValidation")],
         }
     },
 
