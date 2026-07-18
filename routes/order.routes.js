@@ -16,14 +16,14 @@ router.post(
 
             if (!orderItems || !Array.isArray(orderItems) || orderItems.length < 1) {
                 return res.status(403).json({
-                    message: "Order Items are required.",
+                    message: req.t("orderItemsRequired"),
                 });
             }
 
             for (const item of orderItems) {
                 if (!item.product || !item.quantity) {
                     return res.status(403).json({
-                        message: "Order item must contain product and quantity.",
+                        message: req.t("orderItemDetailsMissing"),
                     })
                 }
             }
