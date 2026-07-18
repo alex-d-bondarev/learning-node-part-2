@@ -13,7 +13,7 @@ http:
     type: json
     data: |-
       {
-        "name": "users"
+        "name": "home appliance"
       }
   auth:
     type: bearer

@@ -53,6 +53,10 @@ router.get("/", async (req, res) => {
 
         const filter = {}
 
+        const page = parseInt(req.query.page) || 1
+        const limit = parseInt(req.query.limit) || 10
+        const skip = (page - 1) * limit
+
         if (search) {
             filter.$or = [
                 {title: {$regex: search, $options: "i"}},
@@ -64,17 +68,38 @@ router.get("/", async (req, res) => {
             filter.category = categoryID
         }
 
-        const productsList = await ProductModel.find(filter).populate("category")
+        const totalCount = await ProductModel.countDocuments(filter)
+        const totalPages = Math.ceil(totalCount / limit)
+
+        const productsList = await ProductModel
+            .find(filter)
+            .populate("category", "name")
+            .skip(skip)
+            .limit(limit)
+
+        const sharedDataResponse = {
+            search,
+            categoryID,
+            page,
+            limit,
+            totalProducts: totalCount,
+            totalPages,
+            hasNextPage: page < totalPages,
+            hasPrevPage: page > 1,
+        }
+
         if (!productsList || productsList.length === 0) {
             return res.json({
                 message: req.t("noProductsFound"),
-                data:[],
-                search,
-                categoryID,
+                data: [],
+                ...sharedDataResponse,
             })
         }
 
-        return res.json(productsList)
+        return res.json({
+            data: productsList,
+            ...sharedDataResponse,
+        })
     } catch (err) {
         handleRouteError(err, res)
     }

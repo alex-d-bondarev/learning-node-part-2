@@ -14,19 +14,19 @@ http:
     data:
       - name: title
         type: text
-        value: Apple Vision Glasses
+        value: Russell Hobbs Kettle
       - name: price
         type: text
-        value: "9999"
+        value: "19.99"
       - name: category
         type: text
-        value: 6a4a78264c986bbd271d5276
+        value: 6a5b8d551cc4a7ec1ac61e68
       - name: countInStock
         type: text
-        value: "5"
+        value: "255"
       - name: description
         type: text
-        value: fancy glasses
+        value: Russell Hobbs Textures Electric 1.7L Cordless Kettle (Fast Boil 3KW, Black Premium Plastic, matt & high Gloss Finish, Removable Washable Anti-Scale Filter, Push to Open lid, Perfect Pour spout) 21271
       - name: images
         type: text
         value: ""
