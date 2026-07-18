@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import {addCommonVirtuals} from "../helpers/mongoose-plugin.js";
 
 const orderItemSchema = mongoose.Schema({
     product: {
@@ -47,5 +48,20 @@ const orderSchema = mongoose.Schema({
         timestamps: true,
     }
 );
+
+orderSchema.plugin(addCommonVirtuals);
+
+orderSchema.methods.calculateTotalPrice = function () {
+    return this.orderItems.reduce((total, item) => {
+        return total + (item.price * item.quantity);
+    }, 0)
+}
+
+orderSchema.pre("save", async function (next) {
+    if (this.isModified("orderItems") || !this.totalPrice) {
+        this.totalPrice = this.calculateTotalPrice();
+    }
+    next();
+})
 
 export const OrderModel = mongoose.model("Order", orderSchema);
