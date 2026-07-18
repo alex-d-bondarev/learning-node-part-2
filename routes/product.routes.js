@@ -73,7 +73,7 @@ router.get("/", async (req, res) => {
 
         const productsList = await ProductModel
             .find(filter)
-            .populate("category", "name")
+            .populate("category")
             .skip(skip)
             .limit(limit)
 
@@ -101,6 +101,28 @@ router.get("/", async (req, res) => {
             ...sharedDataResponse,
         })
     } catch (err) {
+        handleRouteError(err, res)
+    }
+})
+
+router.get("/:id", async (req, res) => {
+    try {
+
+        const product = await ProductModel.findByIdAndUpdate(
+            req.params.id,
+            {$inc: {views: 1}},
+            {new: true}
+        ).populate("category")
+
+        if (!product) {
+            return res.status(401).json({
+                message: req.t("noProductsFound")
+            })
+        }
+
+        return res.status(200).json(product)
+
+    } catch (error) {
         handleRouteError(err, res)
     }
 })
