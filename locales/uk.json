@@ -37,6 +37,7 @@
   "__images": "section",
   "imagesArrayValidation": "Зображення потрібно передавати як масив.",
   "mandatoryImagesValidation": "Потрібне хоча б одне зображення.",
+  "onlyImagesValidation": "Дозволено лише файли із зображеннями.",
   "__password": "section",
   "enterValidPhoneNumber": "Будь ласка, введіть дійсний номер телефону.",
   "__phone_number": "section",

@@ -37,6 +37,7 @@
   "__images": "section",
   "imagesArrayValidation": "Images must be passed as an array.",
   "mandatoryImagesValidation": "At least one image is required.",
+  "onlyImagesValidation": "Only image files are allowed.",
   "__password": "section",
   "passwordMinLength": "The password must be at least 6 characters long.",
   "__phone_number": "section",

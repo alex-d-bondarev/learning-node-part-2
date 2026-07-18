@@ -37,6 +37,7 @@
   "__images": "section",
   "imagesArrayValidation": "Изображения должны передаваться в виде массива.",
   "mandatoryImagesValidation": "Требуется как минимум одно изображение.",
+  "onlyImagesValidation": "Разрешены только файлы с изображениями.",
   "__password": "section",
   "enterValidPhoneNumber": "Пожалуйста, введите действительный номер телефона.",
   "__phone_number": "section",
