@@ -1,0 +1,22 @@
+info:
+  name: Delete product by ID
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{app_url}}/{{v1_api}}/{{products_endpoint}}/{{product_id}}"
+  headers:
+    - name: Accept-Language
+      value: "{{locale}}"
+  body:
+    type: multipart-form
+  auth:
+    type: bearer
+    token: "{{login_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
