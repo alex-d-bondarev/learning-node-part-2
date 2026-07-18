@@ -52,6 +52,7 @@
   "__product": "section",
   "productCreatedSuccessfully": "Product created successfully.",
   "productDeletedSuccessfully": "Product deleted successfully.",
+  "productUpdatedSuccessfully": "Product updated successfully.",
   "noProductsFound": "No products found.",
   "__product_title": "section",
   "productTitleMaxLength": "Product title must not exceed 100 characters.",

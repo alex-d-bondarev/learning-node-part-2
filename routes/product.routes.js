@@ -3,7 +3,7 @@ import {ProductModel} from "../models/product.model.js";
 import {handleRouteError} from "../helpers/error-handling.js";
 import {getFileUrl, handleUploadError, uploadMultiple} from "../middleware/upload.middleware.js";
 import {adminOnly, userAndAdmin} from "../middleware/roles.middleware.js";
-import {createProductValidation} from "../validators/product.validator.js";
+import {createProductValidation, updateProductValidation} from "../validators/product.validator.js";
 import {handleValidationErrors} from "../validators/auth.validator.js";
 
 const router = express.Router();
@@ -139,5 +139,66 @@ router.delete("/:id", adminOnly, async (req, res) => {
         res.status(400).send({message: err.message})
     }
 })
+
+router.put(
+    "/:id",
+    adminOnly,
+    uploadMultiple,
+    handleUploadError,
+    updateProductValidation,
+    handleValidationErrors,
+    async (req, res) => {
+        try {
+            const existingProduct = await ProductModel.findById(req.params.id);
+            if (!existingProduct) {
+                return res.status(404).json({
+                    success: false,
+                    message: req.t("noProductsFound"),
+                });
+            }
+
+            const updateData = {};
+
+            if (req.body.title !== undefined) updateData.title = req.body.title;
+            if (req.body.price !== undefined)
+                updateData.price = parseFloat(req.body.price);
+            if (req.body.category !== undefined)
+                updateData.category = req.body.category;
+            if (req.body.countInStock !== undefined)
+                updateData.countInStock = parseInt(req.body.countInStock);
+            if (req.body.description !== undefined)
+                updateData.description = req.body.description;
+
+            if (req.files && req.files.length > 0) {
+                const imageURLs = req.files.map((file) =>
+                    getFileURL(req, file.filename)
+                );
+
+                if (req.body.replaceImages === "true") {
+                    updateData.images = imageURLs;
+                } else {
+                    updateData.images = [...existingProduct.images, ...imageURLs];
+                }
+            }
+
+            const updatedProduct = await ProductModel.findByIdAndUpdate(
+                req.params.id,
+                updateData,
+                {
+                    new: true,
+                    runValidators: true,
+                }
+            ).populate("category");
+
+            return res.status(200).json({
+                success: true,
+                message: req.t("productUpdatedSuccessfully"),
+                data: updatedProduct,
+            });
+        } catch (error) {
+            handleRouteError(error, res);
+        }
+    }
+);
 
 export default router;

@@ -1,23 +1,20 @@
 info:
-  name: Get all products
+  name: Update product by ID
   type: http
-  seq: 2
+  seq: 6
 
 http:
-  method: GET
-  url: "{{app_url}}/{{v1_api}}/{{products_endpoint}}?page=1&limit=25"
+  method: PUT
+  url: "{{app_url}}/{{v1_api}}/{{products_endpoint}}/{{product_id}}"
   headers:
     - name: Accept-Language
       value: "{{locale}}"
-  params:
-    - name: page
-      value: "1"
-      type: query
-    - name: limit
-      value: "25"
-      type: query
   body:
     type: multipart-form
+    data:
+      - name: title
+        type: text
+        value: macbook 43
   auth:
     type: bearer
     token: "{{login_token}}"

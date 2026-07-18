@@ -52,6 +52,7 @@
   "__product": "section",
   "productCreatedSuccessfully": "Продукт успішно створено.",
   "productDeletedSuccessfully": "Товар успішно видалено.",
+  "productUpdatedSuccessfully": "Продукт успішно оновлено.",
   "noProductsFound": "Не знайдено жодних товарів.",
   "__product_title": "section",
   "productTitleMaxLength": "Назва продукту не повинна перевищувати 100 символів.",

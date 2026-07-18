@@ -25,8 +25,8 @@ export const createProductValidation = [
 
     body("images")
         .optional(),
-        // .notEmpty().withMessage((value, {req}) => req.t("mandatoryImagesValidation"))
-        // .isArray().withMessage((value, {req}) => req.t("imagesArrayValidation")),
+    // .notEmpty().withMessage((value, {req}) => req.t("mandatoryImagesValidation"))
+    // .isArray().withMessage((value, {req}) => req.t("imagesArrayValidation")),
 
     body("countInStock")
         .optional()
@@ -47,3 +47,32 @@ export const createProductValidation = [
         .optional()
         .isInt({min: 0}).withMessage((value, {req}) => req.t("minViewsValidation")),
 ]
+
+export const updateProductValidation = [
+    body("title")
+        .optional()
+        .trim()
+        .isLength({min: 2}).withMessage((value, {req}) => req.t("productTitleMinLength"))
+        .isLength({max: 100}).withMessage((value, {req}) => req.t("productTitleMaxLength")),
+
+    body("category")
+        .optional()
+        .isMongoId().withMessage((value, {req}) => req.t("categoryIdValidation")),
+
+    body("price")
+        .optional()
+        .isFloat().withMessage((value, {req}) => req.t("priceNumberValidation"))
+        .isFloat({min: 0}).withMessage((value, {req}) => req.t("minPriceValidation")),
+
+    body("description")
+        .optional()
+        .trim()
+        .isLength({min: 5}).withMessage((value, {req}) => req.t("descriptionNameMinLength"))
+        .isLength({max: 255}).withMessage((value, {req}) => req.t("descriptionNameMaxLength")),
+
+    body("countInStock")
+        .optional()
+        .isInt().withMessage((value, {req}) => req.t("countInStockNumberValidation"))
+        .isInt({min: 0}).withMessage((value, {req}) => req.t("minCountInStockValidation"))
+        .isInt({max: 99999}).withMessage((value, {req}) => req.t("maxCountInStockValidation")),
+];

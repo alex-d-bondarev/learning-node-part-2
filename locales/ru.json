@@ -52,6 +52,7 @@
   "__product": "section",
   "productCreatedSuccessfully": "Продукт успешно создан.",
   "productDeletedSuccessfully": "Товар успешно удален.",
+  "productUpdatedSuccessfully": "Товар успешно обновлен.",
   "noProductsFound": "Товары не найдены.",
   "__product_title": "section",
   "productTitleMaxLength": "Название товара не должно превышать 100 символов.",
