@@ -47,13 +47,36 @@ router.post(
 
 router.get("/", async (req, res) => {
     try {
-        const productsList = await ProductModel.find()
-        if (!productsList || productsList.length === 0) {
-            res.send({message: req.t("noProductsFound")})
+
+        const search = req.query.search
+        const categoryID = req.query.CategoryID
+
+        const filter = {}
+
+        if (search) {
+            filter.$or = [
+                {title: {$regex: search, $options: "i"}},
+                {description: {$regex: search, $options: "i"}}
+            ]
         }
-        res.send(productsList)
+
+        if (categoryID) {
+            filter.category = categoryID
+        }
+
+        const productsList = await ProductModel.find(filter).populate("category")
+        if (!productsList || productsList.length === 0) {
+            return res.json({
+                message: req.t("noProductsFound"),
+                data:[],
+                search,
+                categoryID,
+            })
+        }
+
+        return res.json(productsList)
     } catch (err) {
-        res.status(400).send({message: err.message})
+        handleRouteError(err, res)
     }
 })
 

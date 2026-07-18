@@ -24,8 +24,9 @@ export const createProductValidation = [
 
 
     body("images")
-        .notEmpty().withMessage((value, {req}) => req.t("mandatoryImagesValidation"))
-        .isArray().withMessage((value, {req}) => req.t("imagesArrayValidation")),
+        .optional(),
+        // .notEmpty().withMessage((value, {req}) => req.t("mandatoryImagesValidation"))
+        // .isArray().withMessage((value, {req}) => req.t("imagesArrayValidation")),
 
     body("countInStock")
         .optional()

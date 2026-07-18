@@ -32,7 +32,8 @@ const productSchema = new mongoose.Schema({
 
         images: {
             type: [String],
-            required: [true, "mandatoryImagesValidation"],
+            required: false,
+            // required: [true, "mandatoryImagesValidation"],
         },
 
         countInStock: {

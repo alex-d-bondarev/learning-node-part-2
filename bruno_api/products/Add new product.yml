@@ -14,24 +14,22 @@ http:
     data:
       - name: title
         type: text
-        value: macbook 42_2
+        value: Apple Vision Glasses
       - name: price
         type: text
-        value: "172000"
+        value: "9999"
       - name: category
         type: text
-        value: 6a5290ed015c7afb7a1527a4
+        value: 6a4a78264c986bbd271d5276
       - name: countInStock
         type: text
-        value: "3"
+        value: "5"
       - name: description
         type: text
-        value: almost fits the pocket
+        value: fancy glasses
       - name: images
-        type: file
-        value:
-          - /Users/sasha/Downloads/macBook_4_1.jpg
-        contentType: image/jpeg
+        type: text
+        value: ""
   auth:
     type: bearer
     token: "{{login_token}}"
