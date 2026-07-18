@@ -18,3 +18,5 @@ variables:
     value: products
   - name: product_id
     value: 6a57c592cc33d7f90a15e7b4
+  - name: orders_endpoint
+    value: orders
